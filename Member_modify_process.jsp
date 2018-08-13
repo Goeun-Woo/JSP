@@ -6,7 +6,7 @@
 <%request.setCharacterEncoding("euc-kr"); %>
 <html>
 <head>
-<title>а╓╨╦╪Жа╓</title>
+<title>Л═∙КЁ╢Л┬≤Л═∙</title>
 <style>
 a:link{font-family:" "; color:black; text-decoration:none;}
 a:visited{font-family:" "; color:black; text-decoration:none;}
@@ -17,11 +17,11 @@ function passchk(){
  var pass = document.form.pass.value;
  var pass2 = document.form.pass2.value;
  if (pass2.length == 0 || pass2 == null) {
-  document.form.chk.value = "╨Я╧п╧Ьхё╦╕ ют╥бго╪╪©Д";
+  document.form.chk.value = "К╧└К╟─К╡┬М≤╦К╔╪ Л·┘К═╔М∙≤Л└╦Л ■";
  } else if (pass != pass2) {
-  document.form.chk.value = "╨Я╧п╧Ьхё╟║ ╢ы╦╗╢о╢ы.";
+  document.form.chk.value = "К╧└К╟─К╡┬М≤╦Й╟─ К▀╓К╕┘К▀┬К▀╓.";
  } else {   
-  document.form.chk.value = "╨Я╧п╧Ьхё╟║ ╣©юогу╢о╢ы.";
+  document.form.chk.value = "К╧└К╟─К╡┬М≤╦Й╟─ К▐≥Л²╪М∙╘К▀┬К▀╓.";
  }
  return;
 }
@@ -72,8 +72,6 @@ try{
 	 if(logid.equals(id)){
 		pstmt=conn.prepareStatement(strSQL);
 		pstmt.setString(1,pass);
-	
-		
 		pstmt.setString(2,address);
 		pstmt.setString(3, email);
 		pstmt.setString(4, id);
@@ -81,10 +79,12 @@ try{
 	
 	 }
 	
-}catch(Exception e){
-	out.print(e.toString());
-		
-}finally{
+}
+	catch(Exception e){
+		out.print(e.toString());	
+	}
+	
+	finally{
 	if(pstmt!=null){
 		pstmt.close();
 	}if(conn!=null){
@@ -94,14 +94,14 @@ try{
 	
 %>
 
-<center><font size='3'><b>х╝юнго╠Б</b></font>
+<center><font size='3'><b>М≥∙Л²╦М∙≤Й╦╟</b></font>
 <table border="1">
 <tr>
 <td bgcolor="cccccc">ID</td>
 <td><%=id %></td>
 </tr>
 <tr>
-<td bgcolor="cccccc">юл╦╖</td>
+<td bgcolor="cccccc">Л²╢К╕└</td>
 <td><%=name %></td>
 </tr>
 <tr>
@@ -113,7 +113,7 @@ try{
 <td><%=email %></td>
 </tr>
 <tr>
-<td bgcolor="cccccc">аж╪р</td>
+<td bgcolor="cccccc">Лё╪Л├▄</td>
 <td><%=address %></td>
 </tr>
 
